@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
 
-  def index
-
+  def new
+    @todo = Todo.new
   end
 
   def create
@@ -32,8 +32,8 @@ class TodosController < ApplicationController
     end
   end
 
-  def new
-    @todo = Todo.new
+  def index
+    @todos = Todo.all
   end
 
   private
